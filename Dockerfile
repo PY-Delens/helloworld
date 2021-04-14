@@ -10,6 +10,6 @@ RUN poetry install
 
 ENV FLASK_APP=main:app
 
-EXPOSE 5000
+EXPOSE 80
 
-CMD [ "/usr/local/bin/poetry", "run", "flask", "run", "--host", "0.0.0.0" ]
+CMD [ "/usr/local/bin/poetry", "run", "flask", "run", "--host", "0.0.0.0", "--port", "80" ]
